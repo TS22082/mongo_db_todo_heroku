@@ -25,8 +25,8 @@ renderTodos = () => {
     todos.forEach(todo => {
       $("#todoContainer").prepend(
         `
-        <div class="col-sm-6">
-          <div class="card bg-light mb-3">
+        <div class="col-sm-12">
+          <div class="card col-sm-8 offset-sm-2 bg-light mb-3">
             <div class="card-body">
               <div class="text-center">
                 <p>${todo.text}<p>
