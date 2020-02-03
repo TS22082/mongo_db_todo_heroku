@@ -3,9 +3,10 @@ const app = express();
 const mongoose = require("mongoose");
 const connection = mongoose.connection;
 const logger = require("morgan");
-const PORT = pocess.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost/deploy_todoDB";
 
-mongoose.connect("mongodb://localhost/deploy_todoDB", {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
